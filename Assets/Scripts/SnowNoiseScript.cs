@@ -37,7 +37,7 @@ public class SnowNoiseScript : MonoBehaviour
     }
 
     IEnumerator startSnow(){
-        yield return new WaitForSecondsRealtime(0.01f);
+        yield return new WaitForSecondsRealtime(0.1f);
         snowFallMat.SetFloat("_FlakeAmount", flakeAmount);
         snowFallMat.SetFloat("_FlakeOpacity", flakeOpacity);
 

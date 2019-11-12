@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TrackGenerator : MonoBehaviour
 {
@@ -52,6 +50,6 @@ public class TrackGenerator : MonoBehaviour
     }
 
     private void OnGUI() {
-        GUI.DrawTexture(new Rect(0, 0, 512, 512), splatMap, ScaleMode.ScaleToFit, false, 1);
+        GUI.DrawTexture(new Rect(0, 0, 256, 256), splatMap, ScaleMode.ScaleToFit, false, 1);
     }
 }

@@ -20,19 +20,23 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ceb247f2cea76584fa4b96a28d161396, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: c85451086709c8f44b6f4609f1377f72, type: 3}
+        m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _GlossinessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundAO:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: be8c588146460864ab61c3973fdb5e66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundTex:
-        m_Texture: {fileID: 2800000, guid: 84b61d696b86dc14ea5dc373729981a3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9eccbb07d6b64db459a718c90fcb504e, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 0, y: 0}
+    - _LocalThickness:
+        m_Texture: {fileID: 2800000, guid: b09011637698d8941a5f74d22fd32663, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -48,24 +52,29 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SnowAO:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b09011637698d8941a5f74d22fd32663, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SnowTex:
-        m_Texture: {fileID: 2800000, guid: 84b61d696b86dc14ea5dc373729981a3, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 9eccbb07d6b64db459a718c90fcb504e, type: 3}
+        m_Scale: {x: 50, y: 50}
         m_Offset: {x: 0, y: 0}
     - _Splat:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Ambient: 0.3
     - _AountAO: 0
-    - _Displacement: 0.007
+    - _Attenuation: 1
+    - _Displacement: 0.006
+    - _Distortion: 0.9
     - _Glossiness: 0
     - _Metallic: 0
-    - _Tess: 512
+    - _Power: 0.2
+    - _Scale: 0.16
+    - _Tess: 128
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _GroundColor: {r: 0.5471698, g: 0.508455, b: 0.508455, a: 1}
+    - _GroundColor: {r: 0.3962264, g: 0.25231397, b: 0.25231397, a: 1}
     - _SnowColor: {r: 1, g: 1, b: 1, a: 1}

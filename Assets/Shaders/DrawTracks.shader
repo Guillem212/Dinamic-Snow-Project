@@ -13,7 +13,7 @@
     SubShader
     {
         Tags { "RenderType"="Opaque" }
-        LOD 100
+        LOD 300
 
         Pass
         {
@@ -55,7 +55,7 @@
 
                 //Calcula la posicion y la apmlitud del dibujado en la textura de Splat
                 float drawTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 500 / _Size);
-                float drawBumbTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 300 / _Size);
+                float drawBumbTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 325 / _Size);
 
                 //Calcula el color basandose en el "pincel" previamente calculado
                 fixed4 colorTrack = _Color * (drawTrack * _Strength);
