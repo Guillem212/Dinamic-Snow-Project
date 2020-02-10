@@ -19,14 +19,12 @@ public class SnowNoiseScript : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         snowFallMat = new Material(snowFallShader);
         
-        snowFallMat.SetFloat("_FlakeAmount", 0);
-        snowFallMat.SetFloat("_FlakeOpacity", 4f);
+        snowFallMat.SetFloat("_FlakeAmount", flakeAmount);
+        snowFallMat.SetFloat("_FlakeOpacity", flakeOpacity);
     }
 
     void Update()
     {
-        StartCoroutine(startSnow());
-
         RenderTexture snow = (RenderTexture)meshRenderer.material.GetTexture("_Splat");
         RenderTexture temp = RenderTexture.GetTemporary(snow.width, snow.height, 0, RenderTextureFormat.ARGBFloat);
         Graphics.Blit(snow, temp, snowFallMat);
@@ -34,12 +32,5 @@ public class SnowNoiseScript : MonoBehaviour
         meshRenderer.material.SetTexture("_Splat", snow);
 
         RenderTexture.ReleaseTemporary(temp);
-    }
-
-    IEnumerator startSnow(){
-        yield return new WaitForSecondsRealtime(0.1f);
-        snowFallMat.SetFloat("_FlakeAmount", flakeAmount);
-        snowFallMat.SetFloat("_FlakeOpacity", flakeOpacity);
-
     }
 }

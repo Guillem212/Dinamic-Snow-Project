@@ -68,12 +68,12 @@ Material:
     - _AountAO: 0
     - _Attenuation: 1
     - _Displacement: 0.006
-    - _Distortion: 0.9
+    - _Distortion: 1
     - _Glossiness: 0
     - _Metallic: 0
     - _Power: 0.2
     - _Scale: 0.16
-    - _Tess: 128
+    - _Tess: 64
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _GroundColor: {r: 0.3962264, g: 0.25231397, b: 0.25231397, a: 1}

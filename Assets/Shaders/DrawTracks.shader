@@ -55,11 +55,11 @@
 
                 //Calcula la posicion y la apmlitud del dibujado en la textura de Splat
                 float drawTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 500 / _Size);
-                float drawBumbTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 325 / _Size);
+                float drawBumbTrack = pow(saturate(1 - distance(i.uv, _Coordinate.xy)), 350 / _Size);
 
                 //Calcula el color basandose en el "pincel" previamente calculado
                 fixed4 colorTrack = _Color * (drawTrack * _Strength);
-                fixed4 colorBumbTrack = _ColorGreen * (drawBumbTrack * _Strength * 4);
+                fixed4 colorBumbTrack = _ColorGreen * (drawBumbTrack * _Strength * 3);
 
                 return saturate(col + colorBumbTrack + colorTrack);
             }

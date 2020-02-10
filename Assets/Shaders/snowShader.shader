@@ -3,7 +3,7 @@ Shader "Custom/snowShader"
 {
     Properties
     {
-        _Tess ("Tessellation", Range(1,128)) = 128
+        _Tess ("Tessellation", Range(1,64)) = 64
 
         _SnowColor ("SnowColor", Color) = (1,1,1,1)
         _SnowTex ("Snow (RGB)", 2D) = "white" {}
@@ -18,7 +18,7 @@ Shader "Custom/snowShader"
 
         _BumpMap ("Bump Map", 2D) = "bump" {}
 
-        _Displacement ("Displacement", Range(0, 1.0)) = 0.3
+        _Displacement ("Displacement", Range(0, 0.1)) = 0.05
 
 
         _Distortion ("Distortion", Range(0,1)) = 0.0
@@ -63,7 +63,7 @@ Shader "Custom/snowShader"
 
         void disp (inout appdata v)
         {
-            //if(v.normal.y > 0.5){
+            if(v.normal.y > 0.5){
                 //Calcula el displacement de la capa R de la textura RGB
                 float dr = tex2Dlod(_Splat, float4(v.texcoord.xy,0,0)).r * _Displacement;
                 
@@ -76,7 +76,7 @@ Shader "Custom/snowShader"
 
                 //Displace the vertex upwards to have the collider on the bottom.   
                 v.vertex.xyz += v.normal * _Displacement;
-            //}
+            }
         }
 
 

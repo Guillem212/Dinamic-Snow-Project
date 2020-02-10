@@ -44,7 +44,8 @@ public class RecalculateVertexScript : MonoBehaviour
 
         for(int i = 0; i < vertices.Length; i++){
             if(recuentoVertices.Contains(vertices[i])){
-                normals[i] = normals[recuentoVertices.LastIndexOf(vertices[i])];
+                if(normals[i].y != 1)
+                    normals[i] = normals[recuentoVertices.LastIndexOf(vertices[i])];
             }
         }
 
