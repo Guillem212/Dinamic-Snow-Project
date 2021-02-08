@@ -8,7 +8,7 @@ It has been implemented through procedural textures and the modification of text
 
 * [Unity](https://unity.com/es)
 
-## Autores ✒️
+## Authors ✒️
 * **Guillem Ortega**
 
 You can also look at the list of all [contributors] (https://github.com/Guillem212/Dinamic-Snow-Project/contributors) who have participated in this project.
